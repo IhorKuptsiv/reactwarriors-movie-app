@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Filters extends React.Component {
   render() {
-    const {filters: {sort_by},
+    const {filters: {sort_by,primary_release_year},
     page,
     onChangeFilters,
     onChangePage
@@ -23,6 +23,21 @@ export default class Filters extends React.Component {
             <option value="vote_average.asc">Рейтинг по возростанию</option>
           </select>
         </div>
+
+                                      {/*   primary_release_year */}
+        <div className="form-group">
+        <label htmlFor="primary_release_year">Сортировать по году:</label>
+        <select className="form-control" 
+        id="primary_release_year"
+        value={primary_release_year} 
+        name="primary_release_year"
+        onChange={onChangeFilters}>
+          <option value="primary_release_year">Выберите год</option>
+          
+        </select>
+      </div>
+
+
         <div className="btn-group">
         <button
           type="button"
@@ -39,6 +54,10 @@ export default class Filters extends React.Component {
         >
           Вперед
         </button>
+
+  
+
+        
       </div>
       </form>
     );
