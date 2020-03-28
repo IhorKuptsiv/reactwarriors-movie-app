@@ -30,6 +30,7 @@ export default class SortBy extends React.Component {
 
   render() {
     const { sort_by, onChangeFilters, options } = this.props;
+    //console.log(options);
     return (
       <div className="form-group">
         <label htmlFor="sort_by">Сортировать по:</label>
