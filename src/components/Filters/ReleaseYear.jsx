@@ -14,7 +14,7 @@ export default class ReleaseYear extends React.Component {
       };
 
       render() {
-const {onChangeFilters,years,primary_release_year} = this.props;
+const {onChangeFilters,primary_release_year} = this.props;
 return(
     <div className="form-group">
         <label htmlFor="primary_release_year">Год релиза:</label>
@@ -25,11 +25,14 @@ return(
           value={primary_release_year}
           onChange={onChangeFilters}
         >
-          {years.map(years => (
-            <option key={years.value} value={years.value}>
-              {years.label}
-            </option>
-          ))}
+        
+        {years.map(year => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
+     
+
         </select>
       </div>
 
