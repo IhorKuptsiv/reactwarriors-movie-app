@@ -1,6 +1,7 @@
 import React from "react";
 import SortBy from "./SortBy";
 import ReleaseYear from "./ReleaseYear";
+import Pagination from "./Pagination";
 
 export default class Filters extends React.Component {
   render() {
@@ -41,6 +42,7 @@ export default class Filters extends React.Component {
 
         
       </div>
+      
       </form>
     );
   }
