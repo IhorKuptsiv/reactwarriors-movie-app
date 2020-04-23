@@ -11,6 +11,7 @@ export default class Filters extends React.Component {
       onChangeFilters,
       onChangePage,
       onChangeReset
+      
     } = this.props;
     return (
       <form className="mb-3">
